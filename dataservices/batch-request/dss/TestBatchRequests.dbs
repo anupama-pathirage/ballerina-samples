@@ -1,0 +1,23 @@
+<data enableBatchRequests="true" name="TestBatchRequests" transports="http https local">
+   <config enableOData="false" id="MysqlDB">
+      <property name="driverClassName">com.mysql.jdbc.Driver</property>
+      <property name="url">jdbc:mysql://localhost:3306/testdb</property>
+      <property name="username">root</property>
+      <property name="password">root</property>
+   </config>
+   <query id="InsertData" useConfig="MysqlDB">
+      <sql>Insert into Customers(customerId,firstName,lastName,registrationID) values (?,?,?,?)</sql>
+      <param name="p0_customerId" sqlType="INTEGER"/>
+      <param name="p1_firstName" sqlType="STRING"/>
+      <param name="p2_lastName" sqlType="STRING"/>
+      <param name="p3_registrationID" sqlType="INTEGER"/>
+   </query>
+   <resource method="POST" path="InsertDataRes">
+      <call-query href="InsertData">
+         <with-param name="p0_customerId" query-param="p0_customerId"/>
+         <with-param name="p1_firstName" query-param="p1_firstName"/>
+         <with-param name="p2_lastName" query-param="p2_lastName"/>
+         <with-param name="p3_registrationID" query-param="p3_registrationID"/>
+      </call-query>
+   </resource>
+</data>
