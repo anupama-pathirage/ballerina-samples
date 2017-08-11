@@ -1,1 +1,0 @@
-This sample demonstrates the batch request support using wso2 dss and ballerina
