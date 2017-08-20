@@ -5,11 +5,13 @@ import ballerina.lang.messages;
 @http:configuration {basePath:"/TestBatchRequests"}
 service<http> TestBatchRequests {
 
-    map props = {"jdbcUrl":"jdbc:mysql://localhost:3306/testdb", "username":"root", "password":"root"};
-    sql:ClientConnector testDB = create sql:ClientConnector(props);
+    sql:ConnectionProperties Properties = {};
+    sql:ClientConnector testDB = create sql:ClientConnector(sql:MYSQL, "localhost", 3306, "testdb", "root", "root", Properties);
 
-    @http:POST {}
-    @http:Path {value:"/InsertDataRes"}
+    @http:resourceConfig {
+        methods:["POST"],
+        path:"/InsertDataRes"
+    }
     resource echo (message m) {
         json payload = messages:getJsonPayload(m);
         int length = lengthof payload;
@@ -24,7 +26,7 @@ service<http> TestBatchRequests {
             var firstName, _ = (string)row.p1_firstName;
             sql:Parameter p1 = {sqlType:"varchar", value:firstName};
 
-            var lastName, _ = (string)row.p0_customerId;
+            var lastName, _ = (string)row.p2_lastName;
             sql:Parameter p2 = {sqlType:"varchar", value:lastName};
 
             var registrationID, _ = (int)row.p3_registrationID;
@@ -34,7 +36,7 @@ service<http> TestBatchRequests {
             batchPara[i] = item;
             i = i + 1;
         }
-        int[] count = sql:ClientConnector.batchUpdate(testDB, "Insert into Customers(customerId,firstName,lastName,registrationID) values (?,?,?,?)", batchPara);
+        int[] count = testDB.batchUpdate("Insert into Customers(customerId,firstName,lastName,registrationID) values (?,?,?,?)", batchPara);
         message response = {};
         string test = "Batch Status: ";
         int lenCount = lengthof count;

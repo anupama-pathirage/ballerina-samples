@@ -1,7 +1,7 @@
 This samples demonstrates the batch request support using wso2 dss and ballerina.
 
 Versions : DSS 3.5.1
-		   Ballerina 0.91
+		   Ballerina 0.92
 
 MySQL Database is used with Table named "Customers"
 
