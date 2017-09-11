@@ -1,0 +1,25 @@
+<data name="TestDynamicQuery" transports="http https local">
+   <config enableOData="false" id="testDB">
+      <property name="driverClassName">com.mysql.jdbc.Driver</property>
+      <property name="url">jdbc:mysql://localhost:3306/testdb</property>
+      <property name="username">root</property>
+      <property name="password">root</property>
+   </config>
+   <query id="SelectData" useConfig="testDB">
+      <sql>Select :columns from :table where :whereclause</sql>
+      <result element="results" rowName="result">
+         <element column="customerId" name="customerId" optional="true" xsdType="integer"/>
+         <element column="firstName" name="firstName" optional="true" xsdType="string"/>
+      </result>
+      <param name="columns" sqlType="QUERY_STRING"/>
+      <param name="table" sqlType="QUERY_STRING"/>
+      <param name="whereclause" sqlType="QUERY_STRING"/>
+   </query>
+   <operation name="DynamicQueryTest">
+      <call-query href="SelectData">
+         <with-param name="columns" query-param="columns"/>
+         <with-param name="table" query-param="table"/>
+         <with-param name="whereclause" query-param="whereclause"/>
+      </call-query>
+   </operation>
+</data>
