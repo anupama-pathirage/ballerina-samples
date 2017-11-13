@@ -7,9 +7,9 @@ struct resultdata {
 
 function main (string[] args) {
     endpoint<sql:ClientConnector> testDB {
-                                  create sql:ClientConnector(
-                                         sql:MYSQL, "localhost", 3306, "testdb", "root", "root", {maximumPoolSize:5});
-}
+    	create sql:ClientConnector(
+        	sql:MYSQL, "localhost", 3306, "testdb", "root", "root", {maximumPoolSize:5});
+    }
     int ret = testDB.update("CREATE TABLE StockOrders (orderId INT(6), LUT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP );", null);
     println("Table creation status:" + ret);
 
@@ -50,4 +50,6 @@ function main (string[] args) {
 
     ret = testDB.update("DROP TABLE StockOrders", null);
     println("Table drop status:" + ret);
+     
+    testDB.close();	
 }
