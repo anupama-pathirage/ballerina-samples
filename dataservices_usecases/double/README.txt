@@ -1,0 +1,9 @@
+TestData Table creation status:0
+1
+1
+=========== OUTPUT ==========
+[{"id":1,"numericData":9.2E63,"decimalData":9.2E63,"floatData":9.999999680285692E37,"doubleData":9.2E63},{"id":2,"numericData":0.0,"decimalData":0.0,"floatData":0.0,"doubleData":0.0}]
+<results><result><id>1</id><numericData>9.2E63</numericData><decimalData>9.2E63</decimalData><floatData>9.999999680285692E37</floatData><doubleData>9.2E63</doubleData></result><result><id>2</id><numericData>0.0</numericData><decimalData>0.0</decimalData><floatData>0.0</floatData><doubleData>0.0</doubleData></result></results>
+1|9.2E63|9.2E63|9.999999680285692E37|9.2E63
+2|0.0|0.0|0.0|0.0
+Table TestData Drop status:0
