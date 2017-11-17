@@ -1,0 +1,8 @@
+Table creation status:0
+Data insert status:1
+{"0":1, "1":2, "2":3}
+{"0":1, "1":2, "2":3}
+{"0":33.4, "1":55.4}
+{"0":true, "1":false, "2":false, "3":true, "4":true}
+{"0":"hello", "1":"world"}
+Lengths:3|3|2|5|2

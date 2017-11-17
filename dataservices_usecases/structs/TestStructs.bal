@@ -19,7 +19,8 @@ function main (string[] args) {
             sql:ORACLE, "localhost", 0, "xe", "system", "oracle", {maximumPoolSize:5});
     }
 
-    int ret = testDB.update("CREATE TYPE customtype AS object (field1 NUMBER(5),field2 NUMBER(9,2), field3 varchar(50), field5 NUMBER(5),field6 NUMBER(9,2), field7 varchar(50))", null);
+    int ret = testDB.update("CREATE TYPE customtype AS object (field1 NUMBER(5),field2 NUMBER(9,2), field3 varchar(50),
+                                    field5 NUMBER(5),field6 NUMBER(9,2), field7 varchar(50))", null);
     println("Type creation status:" + ret);
 
     ret = testDB.update("CREATE TABLE structdatatable(id number(20), structdata customtype)", null);
@@ -32,7 +33,7 @@ function main (string[] args) {
     sql:Parameter[] parameters = [para1, para2];
 
     ret = testDB.update("INSERT INTO structdatatable(id,structdata) VALUES (?,?)", parameters);
-    println(ret);
+    println("Data Insert status:" + ret);
 
     ret = testDB.update("DROP table structdatatable", null);
     println("Table Drop status:" + ret);

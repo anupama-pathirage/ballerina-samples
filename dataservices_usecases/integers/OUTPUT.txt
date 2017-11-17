@@ -1,0 +1,19 @@
+TestData Table creation status:0
+TestUnsignedData Table creation status:0
+1
+1
+1
+=========== Signed Data ==========
+[{"id":1,"tinyIntData":127,"smallIntData":32767,"intData":2147483647,"bigIntData":9223372036854775807},{"id":2,"tinyIntData":-128,"smallIntData":-32768,"intData":-2147483648,"bigIntData":-9223372036854775808},{"id":3,"tinyIntData":0,"smallIntData":0,"intData":0,"bigIntData":0}]
+<results><result><id>1</id><tinyIntData>127</tinyIntData><smallIntData>32767</smallIntData><intData>2147483647</intData><bigIntData>9223372036854775807</bigIntData></result><result><id>2</id><tinyIntData>-128</tinyIntData><smallIntData>-32768</smallIntData><intData>-2147483648</intData><bigIntData>-9223372036854775808</bigIntData></result><result><id>3</id><tinyIntData>0</tinyIntData><smallIntData>0</smallIntData><intData>0</intData><bigIntData>0</bigIntData></result></results>
+1|127|32767|2147483647|9223372036854775807
+2|-128|-32768|-2147483648|-9223372036854775808
+3|0|0|0|0
+1
+=========== Unsigned Data ==========
+[{"id":1,"tinyIntData":127,"smallIntData":65535,"intData":4294967295,"bigIntData":9223372036854775807}]
+<results><result><id>1</id><tinyIntData>127</tinyIntData><smallIntData>65535</smallIntData><intData>4294967295</intData><bigIntData>9223372036854775807</bigIntData></result></results>
+1|127|65535|4294967295|9223372036854775807
+Table TestData Drop status:0
+Table TestUnsignedData Drop status:0
+Connector shut downs successfully

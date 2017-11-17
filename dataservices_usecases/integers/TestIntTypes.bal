@@ -58,21 +58,20 @@ function main (string[] args) {
     ret = testDB.update(insertSQL, parameters);
     println(ret);
 
-
     println("=========== Signed Data ==========");
     datatable dt = testDB.select(selectSQL, null);
-    var j,_ = <json>dt;
+    var j, _ = <json>dt;
     println(j);
 
     dt = testDB.select(selectSQL, null);
-    var x,_ = <xml>dt;
+    var x, _ = <xml>dt;
     println(x);
 
     dt = testDB.select(selectSQL, null);
     while (dt.hasNext()) {
-        var result,_ = (RS)dt.getNext();
+        var result, _ = (RS)dt.getNext();
         println(result.id + "|" + result.tinyIntData + "|" + result.smallIntData + "|" + result.intData + "|"
-                    + result.bigIntData );
+                + result.bigIntData);
     }
 
     //Insert unsigned max
@@ -87,18 +86,18 @@ function main (string[] args) {
 
     println("=========== Unsigned Data ==========");
     dt = testDB.select(selectUnsignedSQL, null);
-    j,_ = <json>dt;
+    j, _ = <json>dt;
     println(j);
 
     dt = testDB.select(selectUnsignedSQL, null);
-    x,_ = <xml>dt;
+    x, _ = <xml>dt;
     println(x);
 
     dt = testDB.select(selectUnsignedSQL, null);
     while (dt.hasNext()) {
-        var result2,_ = (RS)dt.getNext();
+        var result2, _ = (RS)dt.getNext();
         println(result2.id + "|" + result2.tinyIntData + "|" + result2.smallIntData + "|" + result2.intData + "|"
-                + result2.bigIntData );
+                + result2.bigIntData);
     }
 
     ret = testDB.update("DROP table TestData", null);

@@ -7,3 +7,4 @@ TestData Table creation status:0
 1|9.2E63|9.2E63|9.999999680285692E37|9.2E63
 2|0.0|0.0|0.0|0.0
 Table TestData Drop status:0
+Connector shut downs successfully..

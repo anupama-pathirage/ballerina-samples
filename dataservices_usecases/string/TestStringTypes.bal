@@ -18,9 +18,9 @@ function main (string[] args) {
         sql:MYSQL, "localhost", 0, "testdb", "root", "root", {maximumPoolSize:5});
     }
 
-    int ret = testDB.update("CREATE TABLE TestData (id INT, charData CHAR(30), varcharData VARCHAR(30), ncharData NCHAR(30),
-            nvarcharData NVARCHAR(30), tinyTextData TINYTEXT, textData TEXT, mediumTextData MEDIUMTEXT,
-            longTextData LONGTEXT)", null);
+    int ret = testDB.update("CREATE TABLE TestData (id INT, charData CHAR(30), varcharData VARCHAR(30),
+                ncharData NCHAR(30), nvarcharData NVARCHAR(30), tinyTextData TINYTEXT, textData TEXT,
+                mediumTextData MEDIUMTEXT, longTextData LONGTEXT)", null);
     println("TestData Table creation status:" + ret);
 
     string insertSQL = "INSERT INTO TestData(id,charData, varcharData, ncharData, nvarcharData, tinyTextData,textData,
@@ -68,8 +68,9 @@ function main (string[] args) {
     dt = testDB.select(selectSQL, null);
     while (dt.hasNext()) {
         var result,_ = (RS)dt.getNext();
-        println(result.id + "|" + result.charData + "|" + result.varcharData + "|" + result.ncharData + "|" + result.nvarcharData
-                + "|" + result.tinyTextData + "|" + result.textData + "|" + result.mediumTextData + "|" + result.longTextData  );
+        println(result.id + "|" + result.charData + "|" + result.varcharData + "|" + result.ncharData + "|"
+                + result.nvarcharData + "|" + result.tinyTextData + "|" + result.textData + "|" + result.mediumTextData
+                + "|" + result.longTextData  );
     }
 
     ret = testDB.update("DROP table TestData", null);

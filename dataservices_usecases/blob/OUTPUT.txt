@@ -1,0 +1,11 @@
+TestData Table creation status:0
+Sample Text
+1
+1
+=========== OUTPUT ddd==========
+[{"id":1,"binaryData":"U2FtcGxlIFRleHQAAAAAAAAAAAA=","varbinaryData":"U2FtcGxlIFRleHQ=","tinyBlobData":"U2FtcGxlIFRleHQ=","blobData":"U2FtcGxlIFRleHQ=","mediumBlobData":"U2FtcGxlIFRleHQ=","longBlobData":"U2FtcGxlIFRleHQ="},{"id":2,"binaryData":null,"varbinaryData":null,"tinyBlobData":null,"blobData":null,"mediumBlobData":null,"longBlobData":null}]
+<results><result><id>1</id><binaryData>U2FtcGxlIFRleHQAAAAAAAAAAAA=</binaryData><varbinaryData>U2FtcGxlIFRleHQ=</varbinaryData><tinyBlobData>U2FtcGxlIFRleHQ=</tinyBlobData><blobData>U2FtcGxlIFRleHQ=</blobData><mediumBlobData>U2FtcGxlIFRleHQ=</mediumBlobData><longBlobData>U2FtcGxlIFRleHQ=</longBlobData></result><result><id>2</id><binaryData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></binaryData><varbinaryData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></varbinaryData><tinyBlobData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></tinyBlobData><blobData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></blobData><mediumBlobData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></mediumBlobData><longBlobData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></longBlobData></result></results>
+1|Sample Text|Sample Text|Sample Text|Sample Text|Sample Text|Sample Text|
+2|||||||
+Table TestData Drop status:0
+Connector shut downs successfully..

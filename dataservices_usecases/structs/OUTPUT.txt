@@ -1,0 +1,6 @@
+Type creation status:0
+Table creation status:0
+Data Insert status:1
+Table Drop status:0
+Type Drop status:0
+Connector shut downs successfully

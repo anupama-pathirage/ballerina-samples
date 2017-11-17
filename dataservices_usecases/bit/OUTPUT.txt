@@ -1,0 +1,11 @@
+Table creation status:0
+1
+1
+1
+[{"id":1,"bitData":true},{"id":2,"bitData":false},{"id":3,"bitData":false}]
+<results><result><id>1</id><bitData>true</bitData></result><result><id>2</id><bitData>false</bitData></result><result><id>3</id><bitData>false</bitData></result></results>
+1|true
+2|false
+3|false
+Table Drop status:0
+Connector shut downs successfully
