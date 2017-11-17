@@ -1,0 +1,10 @@
+Type creation status:0
+Data insertion status:1
+Null Data insertion status:1
+=========== OUTPUT ==========
+[{"ID":1.0,"CLOBDATA":"TEST","NCLOBDATA":"සාම්පල් දත්ත"},{"ID":2.0,"CLOBDATA":null,"NCLOBDATA":null}]
+<results><result><ID>1.0</ID><CLOBDATA>TEST</CLOBDATA><NCLOBDATA>සාම්පල් දත්ත</NCLOBDATA></result><result><ID>2.0</ID><CLOBDATA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></CLOBDATA><NCLOBDATA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></NCLOBDATA></result></results>
+1.0|TEST|සාම්පල් දත්ත|
+2.0|null|null|
+Table Drop status:0
+Connector shut downs successfully
