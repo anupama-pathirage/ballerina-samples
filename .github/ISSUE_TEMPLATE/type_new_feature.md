@@ -1,18 +1,16 @@
 ---
-name: "Bug Report"
-about: "Crete a bug report if something is not working as expected"
-labels: 'Type/Bug'
+name: "New Feature Request"
+about: "Crete a new feature request"
+labels: 'Type/NewFeature'
 
 ---
 
 **Description:**
-<!-- Give a brief description of the bug -->
+<!-- Give a brief description of the new feature -->
 
-**Steps to reproduce:**
+**Describe your problem(s)**
 
-**Affected Versions:**
-
-**OS, DB, other environment details and versions:**
+**Describe your solution(s)**
 
 **Related Issues (optional):**
 <!-- Any related issues such as sub tasks, issues reported in other repositories (e.g component repositories), similar problems, etc. -->

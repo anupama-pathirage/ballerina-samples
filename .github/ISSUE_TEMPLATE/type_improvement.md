@@ -1,14 +1,16 @@
 ---
-name: "Improvement"
-about: "Crete a improvement request"
+name: "Improvement Request"
+about: "Crete a improvement request for an existing feature"
 labels: 'Type/Improvement'
 
 ---
 
 **Description:**
-<!-- Give a brief description of the issue -->
+<!-- Give a brief description of the improvement -->
 
-**Steps to reproduce:**
+**Describe your problem(s)**
+
+**Describe your solution(s)**
 
 **Related Issues (optional):**
 <!-- Any related issues such as sub tasks, issues reported in other repositories (e.g component repositories), similar problems, etc. -->
