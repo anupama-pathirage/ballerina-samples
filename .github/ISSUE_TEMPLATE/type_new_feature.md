@@ -1,6 +1,6 @@
 ---
 name: "New Feature Request"
-about: "Crete a new feature request"
+about: "Create a new feature request"
 labels: 'Type/NewFeature'
 
 ---

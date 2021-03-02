@@ -1,6 +1,6 @@
 ---
 name: "Bug Report"
-about: "Crete a bug report if something is not working as expected"
+about: "Report a bug if something is not working as expected"
 labels: 'Type/Bug'
 
 ---
