@@ -14,15 +14,22 @@ jobs:
             console.log(words)
             for (var i = 0; i < words.length - 1; i++) {
                 var word = words[i]
-                if(word.startsWith('Name\n\nArea/') | word.startsWith('Name\n\nconnectors/') | word.startsWith('Name\n\ntools/')) {
-                    var label = word.substring(6) 
-                    console.log(label)
-                    github.issues.addLabels({
+                var label1 = "";
+                var label2 = "";
+                if(word.startsWith('Name\n\nArea/')) {
+                  label1 = word.substring(6) 
+                  console.log(label1)
+                    
+                  break 
+                }
+                if(word.startsWith('Labels\n\n')) {
+                  label2 = word.substring(6) 
+                  console.log(label2)
+                }
+                github.issues.addLabels({
                     issue_number: context.issue.number,
                     owner: context.repo.owner,
                     repo: context.repo.repo,
-                    labels: [label]
+                    labels: [label1, label2]
                      })
-                    break 
-                }
             }
