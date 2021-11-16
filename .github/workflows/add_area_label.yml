@@ -24,5 +24,10 @@ jobs:
                   label2 = word.substring(6) 
                   console.log(label2)
                 }
-                
+                github.issues.addLabels({
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    labels: [label1], [label2]
+                     })
             }
