@@ -14,9 +14,8 @@ body:
       label: Area Name
       description: Choose the Area you are reporting the bug against
       options:
-        - Area/Compiler  
-        - Area/Runtime  
-        - Area/StandardLibrary  
+        - Area/Compiler (Compiler)
+        - Area/StandardLibrary (Stdlib) 
         - Area/DeveloperTools (VSCode, Test Framework, Debugger, Central, Package API)
         - Area/LanguageSupport (LS, Compiler APIs)
         - Area/Documentation (Web Site, API Docs, BBEs)
