@@ -11,13 +11,18 @@ jobs:
           script: |
             var body = context.payload.issue.body
             var words = body.split(" ");
-            console.log(words)
+            console.log(words);
             for (var i = 0; i < words.length - 1; i++) {
                 var word = words[i]
-                console.log("word:" + word);
+                console.log("vvvv");
+                console.log(word);
+                console.log("Wvvvv");
                 if(word.startsWith('Name\n\nArea/') | word.startsWith('Name\n\nconnectors/') | word.startsWith('Name\n\ntools/') | word.startsWith('Name\n\nCompiler')) {
-                    var label = word.substring(6) 
-                    console.log(label)
+                    var label = word.substring(6); 
+
+                    console.log("yyyy");
+                    console.log(label);
+                    console.log("Wyyyy");
                     github.issues.addLabels({
                     issue_number: context.issue.number,
                     owner: context.repo.owner,
