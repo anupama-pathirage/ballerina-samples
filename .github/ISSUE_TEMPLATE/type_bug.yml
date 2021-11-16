@@ -14,14 +14,20 @@ body:
       label: Area Name
       description: Choose the Area you are reporting the bug against
       options:
-        - Compiler
-        - Runtime
-        - Standard Library
-        - Developer Tools (VSCode, Test Framework, Debugger, Central, Package API)
-        - Language Support (LS, Compiler APIs)
-        - Documentation (Web Site, API Docs, BBEs)
+        - Area/Compiler
+        - Area/Runtime
+        - Area/StandardLibrary
+        - Area/DeveloperTools (VSCode, Test Framework, Debugger, Central, Package API)
+        - Area/LanguageSupport (LS, Compiler APIs)
+        - Area/Documentation (Web Site, API Docs, BBEs)
     validations:
       required: true
+  - type: input
+    id: additional-labels
+    attributes:
+      label: Additional Labels
+      description: >
+        List down additional area tags. For example: http, websub, debugger, Central    
   - type: textarea
     id: description
     attributes:
@@ -32,12 +38,6 @@ body:
     validations:
       required: true
   - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: textarea
     id: version
     attributes:
       label: Ballerina Version or the component/module version
@@ -45,4 +45,16 @@ body:
       placeholder: Version and extra details!
       value: "Version: "
     validations:
-      required: true      
+      required: true 
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Details
+      description: Any additional information to the bug?
+      placeholder: Tell us what you see!          
