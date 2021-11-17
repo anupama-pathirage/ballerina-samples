@@ -48,8 +48,7 @@ body:
     id: version
     attributes:
       label: Ballerina Version or the component/module version
-      description: Any other valuable information.
-      placeholder: Ballerina Version and other related module versions
+      description: Any other valuable information
     validations:
       required: true 
   - type: textarea
