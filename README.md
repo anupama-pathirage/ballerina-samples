@@ -1,3 +1,7 @@
+<h1 align="center">
+  <img src="ballerina_logo.png" alt="Ballerina Logo"/>
+</h1>
+
 # The Ballerina Programming Language
 
 Ballerina is an open source programming language and platform for cloud-era application programmers to easily write software that just works.
