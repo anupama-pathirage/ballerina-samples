@@ -1,5 +1,5 @@
 # pls refer https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
-name: ✍️ Task Report 
+name: ✍️ Task 
 description: File a Task
 title: "[Task]: "
 labels: [Type/Task]

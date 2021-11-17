@@ -1,5 +1,5 @@
 # pls refer https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
-name: ✍️ Improvement Report 
+name: ✍️ Improvement Request 
 description: File an Improvement or a new feature
 title: "[Improvement]: "
 labels: [Type/Improvement]
