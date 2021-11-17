@@ -1,14 +1,14 @@
 # pls refer https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
-name: ❓ Question Report 
-description: File a Question
-title: "[Question]: "
-labels: [Type/Question]
+name: ✍️ Improvement Report 
+description: File an Improvement or a new feature
+title: "[Improvement]: "
+labels: [Type/Improvement]
 body:
   - type: dropdown
     id: area-name
     attributes:
       label: Area
-      description: Choose the Area you are reporting the question against
+      description: Choose the Area you are reporting the improvement against
       options:
         - Area/Compiler (Language and Compiler FE)
         - Area/Runtime (jBallerina Runtime)
@@ -16,25 +16,19 @@ body:
         - Area/DeveloperTools (VSCode, Test Framework, Debugger, Central, Package API)
         - Area/LanguageSupport (LS, Compiler APIs)
         - Area/Documentation (Web Site, API Docs, BBEs)
-        - Area/Other (Any other area  which is not listed here)
+        - Area/Other (Any other area which is not listed here)
     validations:
-      required: true
+      required: true   
   - type: input
     id: additional-labels
     attributes:
       label: Additional Labels
       description: >
-        List down additional area tags as comma seperated values. For example: http, websub, debugger, central    
+        List down additional area tags as comma seperated values. For example: http, websub, debugger, central 
   - type: textarea
     id: description
     attributes:
-      label: Description of the question
-      description: Question details
+      label: Description of the improvement
+      description: Details of the improvement
     validations:
       required: true
-  - type: textarea
-    id: version
-    attributes:
-      label: Ballerina Version or the component/module version
-      description: Any other valuable information.
-      placeholder: Ballerina Version and other related module versions     
