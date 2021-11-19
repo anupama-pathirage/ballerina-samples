@@ -1,7 +1,7 @@
 ---
 name: "⚠️ Security issue Report"
 about: "Report a security related issue"
-labels: 'Type/Bug'
+labels: 'Type/Security'
 
 ---
 
