@@ -1,5 +1,5 @@
 ---
-name: "Improvement/New Feature Request"
+name: " 💡 Improvement/New Feature Request"
 about: "Create an improvement request for an existing feature or new feature"
 labels: 'Type/Improvement'
 
