@@ -1,0 +1,18 @@
+on:
+  issues:
+    types: [closed]
+jobs:
+  check-resolution-label:
+    runs-on: ubuntu-latest
+    if: ${{ !(contains(github.event.issue.labels.*.name, 'Reason/EngineeringMistake') || 
+          contains(github.event.issue.labels.*.name, 'Reason/Complex') ||
+          contains(github.event.issue.labels.*.name, 'Reason/Regression') ||
+          contains(github.event.issue.labels.*.name, 'Reason/Other') ||
+          contains(github.event.issue.labels.*.name, 'Reason/Invalid') ||
+          contains(github.event.issue.labels.*.name, 'Reason/MultipleComponentInteraction')) }}
+    steps:
+      - run:  echo Resolution label is not set  
+      - run: gh issue comment $ISSUE --body "This issue is NOT closed with a proper **Reason label**. Make sure to add proper Reason label before closing."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }} 
