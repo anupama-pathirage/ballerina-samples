@@ -12,7 +12,7 @@ jobs:
           contains(github.event.issue.labels.*.name, 'Reason/MultipleComponentInteraction')) }}
     steps:
       - run:  echo Resolution label is not set  
-      - run: gh issue comment $ISSUE --body "This issue is NOT closed with a proper **Reason** label. Make sure to add proper reason label before closing. \n Reason/EngineeringMistake - The issue occurred due to a mistake made in the past. "
+      - run: gh issue comment $ISSUE --body "This issue is NOT closed with a proper **Reason** label. Make sure to add proper reason label before closing. <br /> Reason/EngineeringMistake - The issue occurred due to a mistake made in the past. "
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }} 
