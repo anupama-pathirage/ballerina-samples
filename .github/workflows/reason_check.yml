@@ -12,12 +12,7 @@ jobs:
           contains(github.event.issue.labels.*.name, 'Resolution/MultipleComponentInteraction')) }}
     steps:
       - run:  echo Resolution label is not set  
-      - run: gh issue comment $ISSUE --body `This issue is NOT closed with a proper **Reason/** label. Make sure to add an appropriate Reason label before closing. Reason/EngineeringMistake - The issue occurred due to a mistake made in the past.
-                Reason/Regression - The issue has introduced a regression.
-                Reason/MultipleComponentInteraction - Issue occured due to interactions in multiple components.
-                Reason/Complex - Issue occurred due to complex scenario.
-                Reason/Issue - Issue is invalid.
-                Reason/Other - None of the above cases.`
+      - run: gh issue comment $ISSUE --body "This issue is NOT closed with a proper **Reason/** label. Make sure to add an appropriate Reason label before closing. Reason/EngineeringMistake - The issue occurred due to a mistake made in the past. \n Reason/Regression - The issue has introduced a regression. \nReason/MultipleComponentInteraction - Issue occured due to interactions in multiple components. \n Reason/Complex - Issue occurred due to complex scenario. \n Reason/Issue - Issue is invalid. \n Reason/Other - None of the above cases."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }} 
